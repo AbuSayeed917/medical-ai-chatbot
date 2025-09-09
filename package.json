@@ -1,0 +1,27 @@
+{
+  "name": "medical-chatbot",
+  "version": "1.0.0",
+  "description": "AI Medical Education Chatbot for Medical Students",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "seed:db": "cd database/seeds && node medicalKnowledge.js",
+    "test": "echo \"Run tests in backend and frontend directories\"",
+    "lint": "echo \"Run linting in backend and frontend directories\""
+  },
+  "keywords": ["medical", "chatbot", "ai", "education", "health", "nextjs", "tailwind"],
+  "author": "Medical Education Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
