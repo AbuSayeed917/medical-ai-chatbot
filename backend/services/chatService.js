@@ -2,8 +2,16 @@ const OpenAI = require('openai');
 const ChatSession = require('../models/ChatSession');
 const { analyzeMedicalQuery, getMedicalContext } = require('./medicalService');
 
+// LOCAL_MODE allows using an OpenAI-compatible local server (e.g., Ollama / llama.cpp server)
+const USE_LOCAL = String(process.env.LOCAL_MODE).toLowerCase() === 'true';
+const BASE_URL = USE_LOCAL ? (process.env.LOCAL_LLM_BASE_URL || 'http://localhost:11434/v1') : undefined;
+const MODEL = USE_LOCAL
+  ? (process.env.LOCAL_LLM_MODEL || 'llama3.1:8b')
+  : (process.env.OPENAI_MODEL || 'gpt-3.5-turbo');
+
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY || (USE_LOCAL ? 'local-llm' : ''),
+  baseURL: BASE_URL
 });
 
 const SYSTEM_PROMPT = `You are a medical education assistant designed to help medical students learn about basic health issues. 
@@ -52,14 +60,25 @@ async function sendMessage(message, userId, sessionId) {
       });
     }
 
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
-      messages,
-      max_tokens: 500,
-      temperature: 0.7
-    });
-
-    const assistantResponse = completion.choices[0].message.content;
+    let assistantResponse;
+    try {
+      const completion = await openai.chat.completions.create({
+        model: MODEL,
+        messages,
+        max_tokens: 500,
+        temperature: 0.7
+      });
+      assistantResponse = completion.choices?.[0]?.message?.content || '';
+    } catch (llmErr) {
+      console.error('LLM call failed, falling back to knowledge-only:', llmErr.message);
+      // Knowledge-only fallback if LLM is unavailable
+      const kbText = (medicalContext || []).map((k, i) => `${i + 1}. ${k.term}: ${k.definition || k.description || ''}`).join('\n');
+      assistantResponse = [
+        'Educational summary based on local knowledge base (LLM unavailable):',
+        kbText || 'No relevant items found in knowledge base.',
+        '\nNote: This is for educational purposes only and not medical advice.'
+      ].join('\n');
+    }
 
     session.messages.push({
       role: 'user',
