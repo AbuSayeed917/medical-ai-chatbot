@@ -9,7 +9,11 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix"
+    "lint:fix": "eslint src/ --fix",
+    "seed": "node scripts/seedMedicalKnowledge.js --file ../database/seeds/demo_medical_knowledge.json",
+    "import:mesh": "node scripts/importMeSH.js --file ../database/migrations/mesh/desc2024.xml",
+    "import:rxterms": "node scripts/importRxTerms.js --file ../database/migrations/rxterms/rxterms.csv",
+    "import:csv": "node scripts/importCSV.js --file ../database/seeds/custom_terms.csv"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -22,7 +26,9 @@
     "express-rate-limit": "^6.10.0",
     "joi": "^17.9.2",
     "openai": "^4.0.0",
-    "socket.io": "^4.7.2"
+    "socket.io": "^4.7.2",
+    "xml2js": "^0.6.2",
+    "csv-parse": "^5.5.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",

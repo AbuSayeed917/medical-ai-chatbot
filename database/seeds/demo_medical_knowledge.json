@@ -1,0 +1,123 @@
+[
+  {
+    "term": "Hypertension",
+    "category": "disease",
+    "definition": "A chronic condition characterized by persistently elevated arterial blood pressure.",
+    "description": "Often asymptomatic. Long-term complications include cardiovascular, cerebrovascular, and renal disease.",
+    "synonyms": ["High blood pressure"],
+    "relatedTerms": ["ACE inhibitor", "Lisinopril", "Stroke"],
+    "severity": "medium",
+    "commonCauses": ["Essential hypertension", "Renal disease", "Endocrine disorders"],
+    "symptoms": ["Often none", "Headache", "Dizziness"],
+    "treatments": ["Lifestyle modification", "ACE inhibitors", "Thiazide diuretics"],
+    "prevention": ["Dietary salt reduction", "Exercise", "Weight control"],
+    "whenToSeeDoctor": "Persistent BP ≥140/90 mmHg or hypertensive symptoms.",
+    "medicalSpecialty": ["Cardiology", "Internal Medicine"],
+    "sources": [{"name": "WHO", "url": "https://www.who.int/news-room/fact-sheets/detail/hypertension", "reliability": "high"}]
+  },
+  {
+    "term": "Type 2 Diabetes Mellitus",
+    "category": "disease",
+    "definition": "A metabolic disorder characterized by insulin resistance and relative insulin deficiency.",
+    "description": "Common in adults; associated with obesity and sedentary lifestyle.",
+    "synonyms": ["T2DM", "Diabetes type 2"],
+    "relatedTerms": ["Metformin", "Hyperglycemia", "HbA1c"],
+    "severity": "medium",
+    "commonCauses": ["Insulin resistance", "Genetic predisposition"],
+    "symptoms": ["Polyuria", "Polydipsia", "Fatigue"],
+    "treatments": ["Lifestyle change", "Metformin", "GLP-1 receptor agonists"],
+    "prevention": ["Weight loss", "Diet", "Physical activity"],
+    "whenToSeeDoctor": "Elevated fasting glucose or symptoms of hyperglycemia.",
+    "medicalSpecialty": ["Endocrinology"],
+    "sources": [{"name": "CDC", "url": "https://www.cdc.gov/diabetes/basics/type2.html", "reliability": "high"}]
+  },
+  {
+    "term": "Asthma",
+    "category": "disease",
+    "definition": "A chronic inflammatory airway disease with variable airflow obstruction and bronchial hyperresponsiveness.",
+    "description": "Symptoms include wheeze, dyspnea, chest tightness, and cough; often reversible.",
+    "synonyms": [],
+    "relatedTerms": ["Albuterol", "Inhaled corticosteroids"],
+    "symptoms": ["Wheeze", "Shortness of breath", "Cough"],
+    "treatments": ["Short-acting beta-agonists", "Inhaled corticosteroids"],
+    "whenToSeeDoctor": "Frequent symptoms, nighttime awakenings, or rescue inhaler overuse.",
+    "medicalSpecialty": ["Pulmonology", "Allergy & Immunology"],
+    "sources": [{"name": "NIH", "url": "https://www.nhlbi.nih.gov/health/asthma", "reliability": "high"}]
+  },
+  {
+    "term": "Migraine",
+    "category": "disease",
+    "definition": "A primary headache disorder characterized by recurrent headaches, often unilateral and pulsating, with nausea and sensitivity to light/sound.",
+    "relatedTerms": ["Triptans", "Aura"],
+    "symptoms": ["Throbbing headache", "Photophobia", "Nausea"],
+    "treatments": ["NSAIDs", "Triptans", "Preventive therapy"],
+    "sources": [{"name": "NICE", "url": "https://www.nice.org.uk/guidance/cg150", "reliability": "high"}]
+  },
+  {
+    "term": "Pneumonia",
+    "category": "disease",
+    "definition": "Infection of the lung parenchyma causing inflammation and consolidation.",
+    "relatedTerms": ["CAP", "Amoxicillin", "Atypical pathogens"],
+    "symptoms": ["Fever", "Cough", "Shortness of breath", "Pleuritic chest pain"],
+    "treatments": ["Antibiotics", "Supportive care"],
+    "sources": [{"name": "WHO", "url": "https://www.who.int/health-topics/pneumonia", "reliability": "high"}]
+  },
+  {
+    "term": "COVID-19",
+    "category": "disease",
+    "definition": "Respiratory illness caused by SARS-CoV-2.",
+    "symptoms": ["Fever", "Cough", "Fatigue", "Loss of taste or smell"],
+    "treatments": ["Supportive care", "Antivirals for high-risk patients"],
+    "sources": [{"name": "WHO", "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019", "reliability": "high"}]
+  },
+  {
+    "term": "Gastroenteritis",
+    "category": "disease",
+    "definition": "Inflammation of the stomach and intestines, typically causing diarrhea and vomiting.",
+    "symptoms": ["Diarrhea", "Vomiting", "Abdominal cramps"],
+    "treatments": ["Oral rehydration", "Antiemetics"],
+    "sources": [{"name": "CDC", "url": "https://www.cdc.gov/norovirus/index.html", "reliability": "high"}]
+  },
+  {
+    "term": "Anemia",
+    "category": "disease",
+    "definition": "Reduced hemoglobin concentration leading to decreased oxygen-carrying capacity of blood.",
+    "symptoms": ["Fatigue", "Pallor", "Dyspnea on exertion"],
+    "treatments": ["Treat underlying cause", "Iron supplementation if deficient"],
+    "sources": [{"name": "WHO", "url": "https://www.who.int/health-topics/anaemia", "reliability": "high"}]
+  },
+  {
+    "term": "Appendicitis",
+    "category": "disease",
+    "definition": "Inflammation of the appendix, often presenting with right lower quadrant abdominal pain.",
+    "symptoms": ["Periumbilical pain migrating to RLQ", "Fever", "Nausea"],
+    "treatments": ["Appendectomy", "Antibiotics"],
+    "sources": [{"name": "NIDDK", "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/appendicitis", "reliability": "high"}]
+  },
+
+  {"term": "Fever", "category": "symptom", "definition": "Elevated body temperature above normal range (≈≥38.0°C).", "relatedTerms": ["Infection", "Inflammation"], "sources": [{"name": "CDC", "url": "https://www.cdc.gov/fever/", "reliability": "high"}]},
+  {"term": "Cough", "category": "symptom", "definition": "A reflex to clear airways of mucus and irritants.", "relatedTerms": ["Pneumonia", "Asthma", "URI"]},
+  {"term": "Chest pain", "category": "symptom", "definition": "Discomfort in the chest that may be cardiac or non-cardiac in origin.", "relatedTerms": ["ACS", "Costochondritis", "GERD"]},
+  {"term": "Abdominal pain", "category": "symptom", "definition": "Pain originating from abdominal organs or wall.", "relatedTerms": ["Appendicitis", "Gastroenteritis", "Gallstones"]},
+  {"term": "Headache", "category": "symptom", "definition": "Pain in the head region with diverse etiologies.", "relatedTerms": ["Migraine", "Tension-type", "Cluster"]},
+  {"term": "Shortness of breath", "category": "symptom", "definition": "Subjective sensation of difficult or uncomfortable breathing.", "relatedTerms": ["Asthma", "Heart failure", "Pneumonia"]},
+
+  {"term": "Ibuprofen", "category": "medication", "definition": "A nonsteroidal anti-inflammatory drug (NSAID) for pain and inflammation.", "relatedTerms": ["NSAID", "COX inhibition"], "sources": [{"name": "DailyMed", "url": "https://dailymed.nlm.nih.gov/", "reliability": "high"}]},
+  {"term": "Acetaminophen", "category": "medication", "definition": "An analgesic and antipyretic agent.", "synonyms": ["Paracetamol"], "relatedTerms": ["Analgesic", "Antipyretic"]},
+  {"term": "Amoxicillin", "category": "medication", "definition": "A beta-lactam antibiotic used for common bacterial infections.", "relatedTerms": ["Penicillin", "Antibiotic"]},
+  {"term": "Metformin", "category": "medication", "definition": "A biguanide that reduces hepatic glucose production and improves insulin sensitivity.", "relatedTerms": ["T2DM", "Insulin resistance"]},
+  {"term": "Lisinopril", "category": "medication", "definition": "An ACE inhibitor used for hypertension and heart failure.", "relatedTerms": ["ACE inhibitor", "Hypertension"]},
+  {"term": "Albuterol", "category": "medication", "definition": "A short-acting beta-2 agonist bronchodilator.", "relatedTerms": ["SABA", "Asthma"]},
+
+  {"term": "Heart", "category": "anatomy", "definition": "Muscular organ that pumps blood through the circulatory system.", "relatedTerms": ["Ventricle", "Atrium", "Valves"]},
+  {"term": "Lungs", "category": "anatomy", "definition": "Paired respiratory organs for gas exchange.", "relatedTerms": ["Alveoli", "Bronchi"]},
+  {"term": "Liver", "category": "anatomy", "definition": "Large glandular organ involved in metabolism, detoxification, and bile production."},
+  {"term": "Kidney", "category": "anatomy", "definition": "Bean-shaped organ filtering blood and producing urine."},
+  {"term": "Brain", "category": "anatomy", "definition": "Central organ of the nervous system responsible for cognition and control."},
+  {"term": "Stomach", "category": "anatomy", "definition": "Muscular organ where initial digestion of proteins occurs via gastric acid and enzymes."},
+
+  {"term": "Complete Blood Count (CBC)", "category": "procedure", "definition": "A common blood test measuring hemoglobin, hematocrit, and cell counts."},
+  {"term": "Chest X-ray", "category": "procedure", "definition": "Radiographic imaging of the chest to evaluate lungs, heart, and thoracic structures."},
+  {"term": "Electrocardiogram (ECG)", "category": "procedure", "definition": "Recording of the heart’s electrical activity to assess rhythm and ischemia."}
+]
+

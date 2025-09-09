@@ -6,10 +6,10 @@ const { createServer } = require('http');
 const { Server } = require('socket.io');
 require('dotenv').config();
 
-const chatRoutes = require('./routes/chatRoutes');
-const medicalRoutes = require('./routes/medicalRoutes');
+const chatRoutes = require('../routes/chatRoutes');
+const medicalRoutes = require('../routes/medicalRoutes');
 const userRoutes = require('./routes/userRoutes');
-const connectDB = require('./config/database');
+const connectDB = require('../config/database');
 
 const app = express();
 const server = createServer(app);
